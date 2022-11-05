@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Chat Room</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="container">
+  <h1>Where have you been?</h1>
+  <h2>Add the destinations to your blex, rate them based on your exprience!</h2>
+
+
+  <h3>My Blex</h3>
+  <form action="/reviews" method="POST">
+    <input type="text" placeholder="Image" name="img">
+    <input type="text" placeholder="Destination" name="business">
+    <input type="text" placeholder="Additional Thoughts" name="review">
+    <button type="submit">Add</button>
+  </form>
+
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message" data-objectId="<%= messages[i]._id %>">
+      <img src="<%= messages[i].img %>" alt="">
+      <span class="nam"><%= messages[i].business.toUpperCase() %></span>
+      <span class="msg"><%= messages[i].review %></span>
+      <!-- <span class="lik"><%= messages[i].thumbUp %></span> -->
+      
+      <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      <% if(messages[i].rating == 0){ %>
+      <div>
+        <input type="radio" name="star" value="1">1
+        <input type="radio" name="star" value="2">2
+        <input type="radio" name="star" value="3">3
+        <input type="radio" name="star" value="4">4
+        <input type="radio" name="star" value="5">5
+        <button type="button" class="btn">Rate</button>
+      </div>
+      <% }else{ %>
+        <span class="msg">Rating: <%= messages[i].rating %></span>
+        <% } %>
+    </li>
+  <% } %>
+  </ul>
+  
+
+  <h2>I've just returned from</h2>
+
+ 
+</section>
+  <script src="main.js"></script>
+
+</body>
+</html>

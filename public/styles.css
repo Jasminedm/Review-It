@@ -1,0 +1,71 @@
+body{
+  background: rgb(28, 37, 41);
+}
+.container{
+  width: 40%;
+  margin: auto;
+  
+}
+h1{
+  color: rgb(242, 197, 244);
+  text-align: center;
+}
+h2{
+  color: rgb(206, 191, 245);
+  text-align: center;
+}
+h3{
+  margin-top: 40px;
+  color: rgb(160, 221, 250);
+  text-align: center;
+}
+.nam{
+  font-size: 18px;
+color: rgb(251, 250, 250);
+border-right: 2px solid black;
+;
+}
+.msg{
+  font-size: 15px;
+color: rgb(208, 211, 211);
+}
+.lik{
+  color: white;
+}
+.fa-thumbs-up{
+  color: green;
+}
+.fa-thumbs-down{
+  color: red;
+}
+.fa-trash{
+  color: rgb(162, 181, 235);
+}
+form{
+  text-align: center;
+}
+input{
+  background-color: rgb(174, 173, 173);
+  color: white;
+  text-align: center;
+}
+button{
+  color: rgb(150, 150, 226);
+  background-color: rgb(77, 77, 77);
+}
+ul{
+  margin-left: 17%;
+}
+li{
+  width: 300px;
+  list-style-type: none;
+  border: 2px solid black;
+}
+span{
+  
+}
+
+img{
+  width: 100%;
+  
+}
