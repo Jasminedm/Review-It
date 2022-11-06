@@ -54,19 +54,21 @@ button{
   background-color: rgb(77, 77, 77);
 }
 ul{
-  margin-left: 17%;
+  width: 100%;
+    text-align: center;
 }
 li{
-  width: 300px;
+  width: 800px;
   list-style-type: none;
-  border: 2px solid black;
+  
 }
 span{
   
 }
 
 img{
-  width: 100%;
+  width: 100px;
+  height: 100px;
   
 }
 
