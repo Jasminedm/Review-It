@@ -11,8 +11,6 @@
   <section class="container">
   <h1>Where have you been?</h1>
   <h2>Add the destinations to your blex, rate them based on your exprience!</h2>
-
-
   <h3>My Blex</h3>
   <form action="/reviews" method="POST">
     <input type="text" placeholder="Image" name="img">
@@ -27,11 +25,15 @@
       <img src="<%= messages[i].img %>" alt="">
       <span class="nam"><%= messages[i].business.toUpperCase() %></span>
       <span class="msg"><%= messages[i].review %></span>
-      <!-- <span class="lik"><%= messages[i].thumbUp %></span> -->
-      
-      <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
       <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      
+      <% if(messages[i].heart === true) { %>
+        <span><i class="fa fa-heart heart-red" data-heart="true" aria-hidden="true"></i></span>
+      <% } else { %>
+          <span><i class="fa fa-heart heart-black" data-heart="false" aria-hidden="true"></i></span>
+      <% } %>
+
+      
       <% if(messages[i].rating == 0){ %>
       <div>
         <input type="radio" name="star" value="1">1
